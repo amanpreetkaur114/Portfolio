@@ -1,6 +1,7 @@
     pipeline{
         agent any
-        stages("checkout"){
+        stages{
+            stage("checkout"){
             steps{
                 checkout scm
             }
@@ -15,5 +16,6 @@
             steps{
                 sh 'sudo npm run build'
             }
+        }
         }
     }
