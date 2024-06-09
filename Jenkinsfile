@@ -8,7 +8,7 @@
         }
         stage("Test"){
             steps{
-                sh 'sudo install npm'
+                sh 'npm install'
                 sh 'npm test'
             }
         }
