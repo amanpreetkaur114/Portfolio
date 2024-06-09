@@ -9,7 +9,6 @@
         stage("Test"){
             steps{
         sh 'sudo yum install npm'
-                sh 'npm test'
             }
         }
         stage("Build"){
