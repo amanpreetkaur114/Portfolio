@@ -2,7 +2,7 @@
    agent {
         docker {
             image 'node:18' // Specify the Node.js version (replace with your desired version)
-            // args '-u root' // Run Docker container as root user if necessary
+            args '-u root' // Run Docker container as root user if necessary
         }
     }       
          tools {
@@ -22,6 +22,12 @@
         stage("Build"){
             steps{
                 sh 'npm run build'
+            }
+        }
+
+        stage("Build Image"){
+            steps{
+                sh 'docker build -t Portfolio:1.0 .'
             }
         }
         }
