@@ -25,8 +25,13 @@
             }
         }
 
-        stage("Build Image"){
-            steps{
+         stage('Build Image') {
+            steps {
+               sh 'sudo apt-get update'
+               sh 'sudo apt-get install -y docker.io'
+               sh 'sudo systemctl start docker'
+               sh 'sudo systemctl enable docker'
+
                 sh 'docker build -t portfolio:1.0 .'
             }
         }
