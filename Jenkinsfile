@@ -27,7 +27,7 @@
 
          stage('Build Image') {
             steps {
-               sh 'yum install -y docker.io'
+               sh 'amazon-linux-extras install docker -y'
                sh 'systemctl start docker'
                sh 'systemctl enable docker'
 
