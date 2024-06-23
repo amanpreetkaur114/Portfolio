@@ -30,7 +30,7 @@
         }
         stage("Docker Push"){
             steps{
- withCredentials([usernamePassword(credentialsId: "94b7913a-746f-4729-83c0-a95a90e9a4e6", passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
+ withCredentials([usernamePassword(credentialsId: "d62b7f47-5d31-42ee-94a6-2adb0b239772", passwordVariable: 'DOCKERHUB_PASSWORD', usernameVariable: 'DOCKERHUB_USERNAME')]) {
             // assumes Jib is configured to use the environment variables
             sh 'docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD'
             sh 'docker tag portfolio:1.0 saj099/portfolio:1.0'
