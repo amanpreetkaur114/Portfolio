@@ -1,5 +1,5 @@
 From node:latest
-WRKDIR /
+WRKDIR /apps
 ADD . .
 RUN npm install
 CMD ["node" ,"next dev"]
