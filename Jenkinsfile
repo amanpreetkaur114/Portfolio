@@ -5,9 +5,7 @@
             args '-u root' // Run Docker container as root user if necessary
         }
     }       
-         tools {
-    nodejs 'NodeJS' // Replace 'NodeJS' with the name you gave in the tool configuration
-  }
+    
         stages{
             stage("checkout"){
             steps{
