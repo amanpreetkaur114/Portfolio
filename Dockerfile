@@ -2,4 +2,4 @@ From node:18
 WORKDIR /usr/src/app
 ADD . .
 RUN npm install
-CMD ["npm" ,"run dev"]
+CMD ["npm" ,"run", "dev"]
