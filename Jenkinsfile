@@ -1,5 +1,10 @@
     pipeline{
-   agent any     
+   agent {
+        docker {
+            image 'node:latest' // Specify the Node.js version (replace with your desired version)
+            args '-u root' // Run Docker container as root user if necessary
+        }
+    }       
     
         stages{
             stage("checkout"){
