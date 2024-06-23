@@ -1,5 +1,5 @@
 From node:18
-WORKDIR  /apps
+WORKDIR /usr/src/app
 ADD . .
 RUN npm install
-CMD ["node" ,"dev"]
+CMD ["npm" ,"dev"]
