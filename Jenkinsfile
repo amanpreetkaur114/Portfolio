@@ -25,9 +25,6 @@
 
          stage('Build Image') {
             steps {
-               sh 'systemctl start docker'
-               sh 'systemctl enable docker'
-
                 sh 'docker build -t portfolio:1.0 .'
             }
         }
