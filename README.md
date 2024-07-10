@@ -126,7 +126,9 @@ export const personalData = {
   facebook: "https://www.facebook.com/abusaid.riyaz/",
   linkedIn: "https://www.linkedin.com/in/amanpreet-kaur-742706117/",
   twitter: "https://twitter.com/said7388",
-  stackOverflow: "https://stackoverflow.com/users/16840768/abu-said",
+  
+  
+  Overflow: "https://stackoverflow.com/users/16840768/abu-said",
   leetcode: "https://leetcode.com/said3812/",
   devUsername: "said7388",
   resume: "...",
@@ -153,3 +155,27 @@ export const personalData = {
 |    tailwindcss     |
 
 ---
+
+
+
+
+project commands:
+
+sudo systemctl start docker
+sudo systemctl status docker
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+sudo usermod -aG docker jenkins
+sudo systemctl restart jenkins
+
+
+docker rm jenkins
+
+
+docker run -u 0 --privileged --name jenkins -it -d -p 8090:8080 -p 5000:5000 \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v $(which docker):/usr/bin/docker \
+  -v /home/jenkins_home:/var/jenkins_home \
+  jenkins/jenkins:latest
+
+docker run -p 88:3000 -d saj099/portfolio:1.0
